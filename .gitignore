@@ -24,8 +24,6 @@ npm-debug.log
 .settings
 .tmproj
 *.esproj
-*.sublime-project
-*.sublime-workspace
 .eslintrc.js
 .htaccess
 nbproject

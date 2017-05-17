@@ -18,12 +18,13 @@ module.exports = {
         'NODE_ENV': JSON.stringify('production')
       }
     }),
+    new webpack.optimize.UglifyJsPlugin(),
     new HtmlWebpackPlugin({
       template: './src/index.html'
     })
   ],
-  // Enable sourcemaps for debugging webpack's output.
-  devtool: 'eval-source-map',
+  // Uncomment for sourcemaps.  This increase size of file greatly.
+  // devtool: 'eval-source-map',
   module: {
         rules : [
           {
@@ -38,14 +39,6 @@ module.exports = {
     extensions: [' ', '.js', '.jsx', '.json']
   },
     // Uncomment if you do not want to include react and react-dom in bundle.js  
-    // externals:{                                                               
-    //   "react": "React",                                                       
-    //   "react-dom": "ReactDOM"                                                 
     // },                                                                        
-    //   devServer: {                                                              
-    //     historyApiFallback: true,                                               
-    //     contentBase: './',                                                      
-    //     port: 8000,                                                             
-    //     headers: { "Access-Control-Allow-Origin": "*" }                         
-    //   }                                                                         
+         
 };
