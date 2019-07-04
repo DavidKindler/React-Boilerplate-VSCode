@@ -19,7 +19,9 @@
     "test:watch": "npm run test -- --watch",
     "watch": "webpack --watch ",
     "build": "webpack --config webpack.config.prod.js",
-    "dev": "node ./node_modules/webpack-dev-server/bin/webpack-dev-server.js"
+    "dev": "node ./node_modules/webpack-dev-server/bin/webpack-dev-server.js",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "author": "David Kindler",
   "license": "ISC",
@@ -43,6 +45,8 @@
     "react-dom": "^15.5.0",
     "react-redux": "^5.0.0",
     "react-router": "^4.1.1",
-    "redux": "^3.6.0"
-  }
+    "redux": "^3.6.0",
+    "snyk": "^1.189.0"
+  },
+  "snyk": true
 }
